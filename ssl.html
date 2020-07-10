@@ -1,0 +1,156 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- FontAwesome -->
+    <link href="fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Code Logic</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Code Logic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sidang.html">Sidang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Sidang -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <br><h2>Cara Merubah atau Menambahkan Port SSL/TLS di Debain 9</h2>
+          </div>
+        </div>
+        
+        <div class="col-md-5">
+          <p>
+            <i><b>Mengubah Port SSL/TLS</b></i>
+          </p><br>
+          <p>
+            1. Login atau Masuk Server dengan Username default : <b>root</b><br><br>
+            2. Jika sudah login, masuk pada bagian default Port SSL/TLS yang terletak di <b>/etc/stunnel/stunnel.conf</b>.<br><br>
+            Edit SSL/TLS dengan cara <b>nano /etc/stunnel/stunnel.conf</b><br><br>
+          <div class="row">
+            <div class="col-md mb-4">
+              <div class="card">
+                <img class="card-img-top" src="img/stunnel.png" alt="Card image cap">
+                  <div class="card-body">
+                    <p class="card-text">Enter untuk masuk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            3. Tampilan :
+              <div class="row">
+                <div class="col-md mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src="img/stunnelconf.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">
+                          <b>/etc/stunnel/stunnel.conf</b>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            4. Cari tulisan :
+              <div class="row">
+                <div class="col-md mb-4">
+                  <div class="card">
+                    <img class="card-img-top" src="img/port443.png" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-text">
+                          <b>
+                            [dropbear]<br>
+                            accept = 443<br>
+                            connect = 127.0.0.1:80
+                          </b>         
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            5. Lalu ubah <b>Port 443</b> atau tambahkan <b>Port </b>setelah <b>443</b> dengan yang di inginkan. <br><br>
+               Contoh :<br>
+                        [dropbear]<br>
+                        accept = 443<br>
+                        connect = 127.0.0.1:80<br><br>
+                        <b>
+                          [dropbear]<br>
+                          accept = 222<br>
+                          connect = 127.0.0.1:80
+                        </b><br><br>
+            6. Jika sudah Tekan <b>CTRL</b> + <b>X</b> Lalu <b>Y</b> untuk konfirmasi dan <b>Enter</b>.<br><br>
+            7. Masukan perintah :
+            <div class="row">
+              <div class="col-md mb-4">
+               <div class="card">
+                 <img class="card-img-top" src="img/stunnel4.png" alt="Card image cap">
+                   <div class="card-body">
+                    <p class="card-text">
+                      <b>/etc/init.d/stunnel4 restart</b>
+                    </p>
+                  </div>
+                </div>
+               </div>
+              </div>
+              <p>Untuk mreubah atau restart <b>Port SSL/TLS</b></p>
+            8. Selesai.<br><br>
+            <p align="center">
+              <a href="https://www.mediafire.com/file/fxrjzlkcikwsd1b/ssl%26tls.rar/file">Download Foto SSL/TLS
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+              </a>
+            </p>   
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p>Arman Copyright &copy; 2020.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>  
